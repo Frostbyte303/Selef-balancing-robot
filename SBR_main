@@ -57,10 +57,10 @@
     TimedAction updateIMUSensorsTimedAction = TimedAction(8, updateIMUSensors); 
 
 
-        // button declarations
-    Button startBtn(7, false, false, 20);
-    Button stopBtn(6, false, false, 20);
-    Button calibrateBtn(4, false, false, 20);
+        // button declarations --not required
+   // Button startBtn(7, false, false, 20);
+    //Button stopBtn(6, false, false, 20);
+    //Button calibrateBtn(4, false, false, 20);
 
         // motor controller
     #define InA_R               8   //direction control for motor Right
@@ -71,7 +71,7 @@
     #define InA_L               13  //direction control for motor Left
     #define InB_L               12  
     
-        // imu variables
+        // imu variables  --needs review for mpu6050
     float imuValues[6];
     float ypr[3];
     float roll;
@@ -101,7 +101,7 @@ PID speedPIDLeft(&speedPIDInputLeft, &speedPIDOutputLeft, &speedPIDSetpointLeft,
     MovingAvarageFilter throttleControlAvarageFilter(40);
 
         // Set the FreeSixIMU object. This handles the communcation to the IMU.
-    FreeSixIMU sixDOF = FreeSixIMU();
+    //FreeSixIMU sixDOF = FreeSixIMU();
 
 
         // remote control
@@ -124,7 +124,7 @@ PID speedPIDLeft(&speedPIDInputLeft, &speedPIDOutputLeft, &speedPIDSetpointLeft,
       //initSerialCommand();
 
            //------------------------[Inisiating Motors]-----------------------------------//
-       //Seting thedirection to "Forward" as inisiating state
+       //Setting the direction to "Forward" as initiating state
         
         //Set control pins to be outputs
         pinMode(PWM_A, OUTPUT);  //pwm signals
@@ -156,8 +156,8 @@ PID speedPIDLeft(&speedPIDInputLeft, &speedPIDOutputLeft, &speedPIDSetpointLeft,
           Wire.begin();
           delay(5);
             //----------------------[Inisiating IMU sensors]--------------------------------//
-          sixDOF.init(); //begin the IMU
-          delay(5);
+          //sixDOF.init(); //begin the IMU
+          //delay(5);
 
             //-------------------------[Inisiating PIDs]------------------------------------//
           initAnglePID();             //initsierar AnglePID
