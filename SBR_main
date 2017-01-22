@@ -1,12 +1,12 @@
 
     #include <PID_v1.h> //github.com/mwoodward/Arduino-PID-Library
-    #include <FreeSixIMU.h> // imu. www.varesano.net/projects/hardware/FreeIMU#library
-    #include <FIMU_ADXL345.h> // imu
-    #include <FIMU_ITG3200.h> // imu
+  //  #include <FreeSixIMU.h> // imu. www.varesano.net/projects/hardware/FreeIMU#library
+  //  #include <FIMU_ADXL345.h> // imu
+  //  #include <FIMU_ITG3200.h> // imu
     #include <Wire.h> // for i2c
     #include <math.h> // where would we be without math?
     #include <TimedAction.h> // for updating sensors and debug
-    #include <Button.h>        //github.com/JChristensen/Button
+  //  #include <Button.h>        //github.com/JChristensen/Button
     #include <EEPROM.h> // for storing configuraion
     #include <avr/wdt.h> // watchdog
     #include <FIR.h>  //github.com/sebnil/FIR-filter-Arduino-Library
